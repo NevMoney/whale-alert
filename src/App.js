@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Stack, Heading, Center } from '@chakra-ui/react'
+import { WatchAddress } from './Forms/WatchAddress'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Center>
+      <Box w={450}>
+        <Center>
+          <Heading m={4} as="h1" size="2xl" isTruncated>
+            🐋Whale Alert🚨
+          </Heading>
+        </Center>
+        <Stack spacing={3}>
+          <Box>
+            {/* form begins here */}
+            <WatchAddress />
+          </Box>
+        </Stack>
+      </Box>
+    </Center>
+  )
 }
 
-export default App;
+export default App
